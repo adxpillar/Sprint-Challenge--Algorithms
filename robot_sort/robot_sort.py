@@ -97,20 +97,19 @@ class SortingRobot:
         Sort the robot's list.
         """
         
-        while self.light_is_on() and self.can_move_left:
-            self
         # check if light is on
         while not self.light_is_on():
             # turn light on if it's not on 
             self.set_light_on()
             # can it move right?
             while self.can_move_right():
-                # swap item
+                # swap item and move to the next one
+                # in case we 're starting from index 0
                 self.swap_item()
-                # move right
+                # the move right
                 self.move_right()
                 # check if item is greater than 0
-                # for insertion sort 
+                # for bubble sort 
                 if self.compare_item() > 0:
                     # swap 
                     self.swap_item()
@@ -129,17 +128,11 @@ class SortingRobot:
                     self.move_right()
             # if light is off 
             if not self.light_is_on():
-                # and can move left 
+                # and can move left  
                 while self.can_move_left():
                     # move to the index[0]
                     self.move_left()
                 
-
-
-
-
-
-
 if __name__ == "__main__":
     # Test our your implementation from the command line
     # with `python robot_sort.py`
