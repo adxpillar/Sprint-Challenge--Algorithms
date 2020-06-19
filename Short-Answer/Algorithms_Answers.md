@@ -21,10 +21,14 @@ The right algorithm here will be a recursive binary search algorithm to determin
 is the middle point. 
 
 First we get the total number of floors or len(f)
+we assume a target floor of the middle floor 
 The we traverse our floors from top to bottom 
 We move recursively through each floor from the top 
 and we take note of the number of dropped + broken eggs on each floor 
-Once we get to a floor with the least number of dropped + broken eggs
-We can select that flooor as our middle floor 
+Once we get to a floor with the least number of dropped + broken eggs - 
+We can select that floor as the new middle floor 
+Our base case is when there are no more floors to drop eggs from 
+
+The proposed algorithm should have a runtime complexity of Olog(n)
 
 
