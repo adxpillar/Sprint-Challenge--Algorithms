@@ -110,7 +110,7 @@ class SortingRobot:
                 # move right
                 self.move_right()
                 # check if item is greater than 0
-                # for bubble sort 
+                # for insertion sort 
                 if self.compare_item() > 0:
                     # swap 
                     self.swap_item()
@@ -122,7 +122,17 @@ class SortingRobot:
                     self.move_right()
                     # turn light off, work done
                     self.set_light_off()
-                
+                else:
+                    # check for extreme
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+            # if light is off 
+            if not self.light_is_on():
+                # and can move left 
+                while self.can_move_left():
+                    # move to the index[0]
+                    self.move_left()
 
                 
 
