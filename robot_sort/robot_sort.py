@@ -133,7 +133,6 @@ class SortingRobot:
                 while self.can_move_left():
                     # move to the index[0]
                     self.move_left()
-
                 
 
 
