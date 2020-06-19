@@ -21,7 +21,7 @@ The right algorithm here will be a recursive binary search algorithm to determin
 is the middle point. 
 
 First we get the total number of floors or len(f)
-we assume a target floor of the middle floor 
+we assume a target floor of the middle floor - half of the len(of floor)
 The we traverse our floors from top to bottom 
 We move recursively through each floor from the top 
 and we take note of the number of dropped + broken eggs on each floor 
